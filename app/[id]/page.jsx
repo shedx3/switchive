@@ -26,7 +26,7 @@ const  ProductDetails = ({params}) => {
 
   useEffect(() => {
     getProductDetails();
-  }, []);
+  }, [product]);
 
   const formatDate = (dateStr) => {
     const dateObj = new Date(dateStr);
