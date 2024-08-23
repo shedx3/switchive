@@ -26,7 +26,7 @@ const  ProductDetails = ({params}) => {
 
   useEffect(() => {
     getProductDetails();
-  }, [product]);
+  }, [getProductDetails]);
 
   const formatDate = (dateStr) => {
     const dateObj = new Date(dateStr);
@@ -40,7 +40,7 @@ const  ProductDetails = ({params}) => {
   if (error) {
     return (
       <div>
-        <Error error={error} reset={() => window.location.reload()} />
+        <p className="text-red-500 text-2xl font-medium">Error: {error.message}</p>
       </div>
     );
   }
